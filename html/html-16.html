@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Practical 16</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+<h1>Marquee Alternative</h1><p>Use CSS animation instead of the obsolete marquee tag.</p><div class="demo-box" style="overflow:hidden"><div style="animation:slide 6s linear infinite;white-space:nowrap">Welcome to the HTML practical website!</div></div><style>@keyframes slide{from{transform:translateX(100%)}to{transform:translateX(-100%)}}</style>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>
