@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Practical 03</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+<h1>Conditions</h1><input id="mark" type="number" placeholder="Enter mark"><button class="btn" onclick="check()">Check</button><div id="out" class="result"></div><script>function check(){let m=+document.getElementById('mark').value;document.getElementById('out').textContent=m>=40?'Pass':'Fail'}</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>

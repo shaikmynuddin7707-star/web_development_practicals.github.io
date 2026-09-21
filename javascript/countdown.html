@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+
+<h1>Countdown Timer</h1><div class="flex"><input id="mins" type="number" min="1" placeholder="Minutes"><button class="btn" onclick="start()">Start</button></div>
+<div id="display" class="clock">00:00</div><script>
+let timer,total=0;
+function start(){clearInterval(timer);total=Math.max(1,+document.getElementById('mins').value||1)*60;render();timer=setInterval(()=>{total--;render();if(total<=0){clearInterval(timer);alert('Time is up!')}},1000)}
+function render(){document.getElementById('display').textContent=`${String(Math.floor(total/60)).padStart(2,'0')}:${String(total%60).padStart(2,'0')}`}
+</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>

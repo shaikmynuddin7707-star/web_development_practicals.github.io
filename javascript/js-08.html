@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Practical 08</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+<h1>DOM Manipulation</h1><p id="text">Original text</p><button class="btn" onclick="change()">Change Text</button><script>function change(){const e=document.getElementById('text');e.textContent='Text changed using the DOM!';e.style.color='#2563eb'}</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+
+<h1>Image Slider</h1><div class="slider-wrap"><img id="slide" class="slider-img" alt="Slider image"><div class="flex" style="justify-content:center;margin-top:12px"><button class="btn" onclick="prev()">Previous</button><button class="btn" onclick="next()">Next</button></div><p id="caption"></p></div>
+<script>
+const slides=[
+ ['https://via.placeholder.com/800x400/2563eb/ffffff?text=Slide+1','HTML'],
+ ['https://via.placeholder.com/800x400/7c3aed/ffffff?text=Slide+2','CSS'],
+ ['https://via.placeholder.com/800x400/16a34a/ffffff?text=Slide+3','JavaScript']
+];let i=0;
+function render(){slide.src=slides[i][0];caption.textContent=slides[i][1]}
+function next(){i=(i+1)%slides.length;render()} function prev(){i=(i-1+slides.length)%slides.length;render()} render();setInterval(next,4000);
+</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>

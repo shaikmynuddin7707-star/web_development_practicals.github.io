@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TODO List</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+
+<h1>TODO List</h1><div class="flex"><input id="task" placeholder="Enter a task"><button class="btn" onclick="addTask()">Add</button></div><div id="list" class="card"></div>
+<script>
+let tasks=JSON.parse(localStorage.getItem('tasks')||'[]');
+function save(){localStorage.setItem('tasks',JSON.stringify(tasks));render()}
+function addTask(){let t=task.value.trim();if(!t)return;tasks.push({text:t,done:false});task.value='';save()}
+function toggle(i){tasks[i].done=!tasks[i].done;save()}
+function removeTask(i){tasks.splice(i,1);save()}
+function render(){list.innerHTML=tasks.length?tasks.map((t,i)=>`<div class="todo-item ${t.done?'done':''}"><span onclick="toggle(${i})" style="cursor:pointer">${t.text}</span><button class="btn danger" onclick="removeTask(${i})">Delete</button></div>`).join(''):'<p class="small">No tasks yet.</p>'}
+render()
+</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>

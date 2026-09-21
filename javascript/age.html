@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+
+<h1>Age Calculator</h1><label>Date of Birth</label><input id="dob" type="date"><button class="btn" onclick="calculate()">Calculate Age</button><div id="result" class="result"></div>
+<script>function calculate(){let d=new Date(dob.value),t=new Date();if(!dob.value){result.textContent='Please select a date.';return}let age=t.getFullYear()-d.getFullYear();if(t<new Date(t.getFullYear(),d.getMonth(),d.getDate()))age--;result.textContent=`Your age is ${age} years.`}</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>

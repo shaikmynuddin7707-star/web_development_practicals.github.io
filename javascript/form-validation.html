@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<nav class="navbar"></nav>
+<main class="container">
+
+<h1>Form Validation</h1><form id="form"><label>Name</label><input id="name" required minlength="3"><label>Email</label><input id="email" type="email" required><label>Password</label><input id="password" type="password" minlength="6" required><button class="btn">Validate</button></form><div id="result" class="result"></div>
+<script>form.addEventListener('submit',e=>{e.preventDefault();if(form.checkValidity()){result.className='result success-box';result.textContent='Form is valid and ready to submit.'}else{result.className='result error-box';result.textContent='Please correct the form fields.';form.reportValidity()}})</script>
+</main>
+<footer class="footer">HTML-CSS-JS Practical &copy; <span class="year"></span></footer>
+<script src="../scripts/common.js"></script>
+<script>addNav();</script>
+</body>
+</html>
